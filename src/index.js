@@ -1,1 +1,1 @@
-export default from './StyleLog';
+export default from './Log.jsx';

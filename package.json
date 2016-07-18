@@ -10,16 +10,8 @@
   "scripts": {
     "clean": "rimraf dist",
     "lint": "eslint src test",
-    "check": "npm run lint -s && dependency-check package.json --entry src",
-    "prebuild": "npm run check -s && npm run clean -s",
     "build": "babel --optional runtime src -d dist",
-    "prepublish": "npm run build",
-    "deploy": "git pull --rebase origin master && git push origin master",
-    "patch": "npm version patch && npm publish",
-    "minor": "npm version minor && npm publish",
-    "major": "npm version major && npm publish",
-    "postpublish": "git push origin master --follow-tags",
-    "toc": "doctoc --github --title \"# Changelog\" CHANGELOG.md"
+    "deploy": "git pull --rebase origin master && git push origin master"
   },
   "repository": {
     "type": "git",
@@ -44,6 +36,7 @@
   "devDependencies": {
     "babel-cli": "^6.10.1",
     "babel-core": "^6.10.4",
+    "babel-loader": "^6.2.4",
     "babel-eslint": "^6.1.0",
     "babel-preset-es2015": "^6.9.0",
     "babel-preset-react": "^6.5.0",
