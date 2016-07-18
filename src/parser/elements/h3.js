@@ -12,5 +12,7 @@ export default function h1(parser, node) {
     children = Array.isArray(children) ? children : [children];
   }
 
-  return parser(children[0], defaultStyles);
+  let style = {...defaultStyles, ...node.props};
+
+  return parser(children[0], style);
 }

@@ -4,7 +4,7 @@ export default function h2(parser, node) {
     font_weight: 'bold',
     font_size: '1.5em'
   }
-  
+
   let children = [];
 
   if (node.props) {
@@ -12,5 +12,7 @@ export default function h2(parser, node) {
     children = Array.isArray(children) ? children : [children];
   }
 
-  return parser(children[0], defaultStyles);
+  let style = {...defaultStyles, ...node.props};
+
+  return parser(children[0], style);
 }

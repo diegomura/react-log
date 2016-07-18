@@ -4,12 +4,12 @@ import Log from 'react-log';
 
 ReactDOM.render(
   <Log>
-    <h1>h1 title</h1>
-    <h2>h2 title</h2>
-    <h3>h3 title</h3>
-    <h4>h4 title</h4>
-    <h5>h5 title</h5>
-    <h6>h6 title</h6>
+    <h1 color="red">h1 title</h1>
+    <h2 color="blue">h2 title</h2>
+    <h3 color="green">h3 title</h3>
+    <h4 color="yellow">h4 title</h4>
+    <h5 color="orange">h5 title</h5>
+    <h6 color="purple" font-size="3em">h6 title</h6>
   </Log>,
   document.getElementById('root')
 )
