@@ -1,5 +1,6 @@
 export default function h1(parser, node) {
   const defaultStyles = {
+    display: 'block',
     color: 'black',
     font_weight: 'bold',
     font_size: '.67em'
@@ -12,7 +13,11 @@ export default function h1(parser, node) {
     children = Array.isArray(children) ? children : [children];
   }
 
-  let style = {...defaultStyles, ...node.props};
+  let parsedElement = parser(children[0], {...defaultStyles, ...node.props});
 
-  return parser(children[0], style);
+  if (parsedElement.style.display && parsedElement.style.display == 'block') {
+    parsedElement.markup += '\n';
+  }
+
+  return parsedElement;
 }

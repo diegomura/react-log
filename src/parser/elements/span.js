@@ -10,7 +10,11 @@ export default function span(parser, node) {
     children = Array.isArray(children) ? children : [children];
   }
 
-  let style = {...defaultStyles, ...node.props};
+  let parsedElement = parser(children[0], {...defaultStyles, ...node.props});
 
-  return parser(children[0], style);
+  if (parsedElement.style.display && parsedElement.style.display == 'block') {
+    parsedElement.markup += '\n';
+  }
+
+  return parsedElement;
 }

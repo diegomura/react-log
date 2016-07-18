@@ -12,7 +12,7 @@ ReactDOM.render(
     <h6 color="purple">h6 title</h6>
     <p>We also support paragraphs</p>
     <div>And divs</div>
-    <span>And span</span>
+    <span>And</span><span> span</span>
   </Log>,
   document.getElementById('root')
 )
