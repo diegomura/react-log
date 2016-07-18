@@ -1,4 +1,6 @@
 import body from './body'
+import div from './div'
+import span from './span'
 import h1 from './h1'
 import h2 from './h2'
 import h3 from './h3'
@@ -9,5 +11,5 @@ import p from './p'
 import text from './text'
 
 export default {
-  body, h1, h2, h3, h4, h5, h6, p, text
+  body, div, span, h1, h2, h3, h4, h5, h6, p, text
 }
