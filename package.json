@@ -1,7 +1,7 @@
 {
-  "name": "react-style-log",
+  "name": "react-log",
   "version": "1.0.0",
-  "description": "Style your log in a React way",
+  "description": "React for the Console",
   "main": "dist/index.js",
   "files": [
     "bin/",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/diegomura/react-log"
   },
   "keywords": [
     "react",
@@ -26,9 +26,9 @@
   "author": " <diegomuracciole@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": ""
+    "url": "https://github.com/diegomura/react-log/issues"
   },
-  "homepage": "",
+  "homepage": "https://github.com/diegomura/react-log",
   "peerDependencies": {
     "react": "*",
     "react-dom": "*"
