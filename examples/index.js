@@ -4,16 +4,10 @@ import Log from 'react-log';
 
 ReactDOM.render(
   <Log>
-    <h1 color="red">h1 title</h1>
-    <h2 color="blue">h2 title</h2>
-    <h3 color="green">h3 title</h3>
-    <h4 color="yellow">h4 title</h4>
-    <h5 color="orange">h5 title</h5>
-    <h6 color="purple">h6 title</h6>
-    <p>We also support paragraphs</p>
-    <a href="www.google.com"></a>
-    <div>And divs</div>
-    <span>And</span><span> span</span>
+    <h2 color="white" background="tomato" border-radius="3px" padding="1px 20px">react-log</h2>
+    <p font-size="110%">Cool things can be done in the console. Did you know that?</p>
+    <h3 display="inline">For more info: </h3>
+    <a href="https://github.com/diegomura/react-log">Github repo</a>
   </Log>,
   document.getElementById('root')
 )

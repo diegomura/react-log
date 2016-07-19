@@ -1,7 +1,8 @@
 export default function p(parser, node) {
   const defaultStyles = {
     display: 'block',
-    color: 'black'
+    color: 'black',
+    margin_left: '8px'
   }
 
   let children = [];
