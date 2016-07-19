@@ -11,6 +11,7 @@ ReactDOM.render(
     <h5 color="orange">h5 title</h5>
     <h6 color="purple">h6 title</h6>
     <p>We also support paragraphs</p>
+    <a href="www.google.com"></a>
     <div>And divs</div>
     <span>And</span><span> span</span>
   </Log>,
