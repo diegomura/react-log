@@ -4,7 +4,7 @@
 
 ## Install
 ```sh
-npm install react-log --save 
+npm install react-log --save
 ```
 
 ## Usage
