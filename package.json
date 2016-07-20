@@ -53,5 +53,6 @@
     "watch": "^0.19.1"
   },
   "dependencies": {
+    "param-case": "^2.1.0"
   }
 }
