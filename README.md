@@ -42,7 +42,6 @@ Does not work on Safari or IE as far I've seen. Yet.
 * [ ] Nested elements support
 * [ ] Add more examples
 * [ ] Avoid code repetition using some type of _base element_
-* [ ] CamelCase props
 * [ ] Docs of avaliable elements and props
 
 ## License
