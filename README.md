@@ -1,5 +1,23 @@
 <big><h1 align="center"><span style="color:CornflowerBlue; font-size:90%">> </span>react-log</h1></big>
 
+<p align="center">
+	<a href="https://travis-ci.org/diegomura/react-log">
+		<img src="https://api.travis-ci.org/diegomura/react-log.svg?branch=master">
+	</a>
+  
+	<a href="https://www.npmjs.com/package/react-log">
+		<img src="https://img.shields.io/npm/v/react-log.svg?maxAge=2592000">
+	</a>
+
+	<a href="https://www.npmjs.com/package/react-log">
+		<img src="https://img.shields.io/npm/dm/react-log.svg?maxAge=2592000">
+	</a>
+
+	<a href="https://www.npmjs.com/package/react-log">
+		<img src="https://img.shields.io/npm/l/react-log.svg?maxAge=2592000">
+	</a>
+</p>
+
 > React for the Console
 
 ## Install
