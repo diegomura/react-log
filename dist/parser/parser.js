@@ -20,5 +20,7 @@ function parser(node, style) {
     throw new TypeError(node.type);
   }
 
-  return _elements2.default[node.type](parser, node);
+  var element = new _elements2.default[node.type](node, parser);
+
+  return element.render();
 }
