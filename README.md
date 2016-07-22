@@ -4,7 +4,7 @@
 	<a href="https://travis-ci.org/diegomura/react-log">
 		<img src="https://api.travis-ci.org/diegomura/react-log.svg?branch=master">
 	</a>
-  
+
 	<a href="https://www.npmjs.com/package/react-log">
 		<img src="https://img.shields.io/npm/v/react-log.svg?maxAge=2592000">
 	</a>
@@ -59,7 +59,6 @@ Does not work on Safari or IE as far I've seen. Yet.
 * [ ] Img element support
 * [ ] Nested elements support
 * [ ] Add more examples
-* [ ] Avoid code repetition using some type of _base element_
 * [ ] Docs of avaliable elements and props
 
 ## License

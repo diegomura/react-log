@@ -9,5 +9,7 @@ export default function parser(node, style) {
     throw new TypeError(node.type);
   }
 
-  return logElements[node.type](parser, node);
+  let element = new (logElements[node.type])(node, parser);
+
+  return element.render();
 }

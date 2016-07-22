@@ -1,23 +1,16 @@
-export default function h1(parser, node) {
-  const defaultStyles = {
-    display: 'block',
-    color: 'black',
-    font_weight: 'bold',
-    font_size: '.83em'
+import BaseElement from './BaseElement'
+
+export default class H5 extends BaseElement {
+  getDefaultStyles() {
+    return {
+      display: 'block',
+      color: 'black',
+      font_weight: 'bold',
+      font_size: '.83em'
+    }
   }
 
-  let children = [];
-
-  if (node.props) {
-    children = node.props.children;
-    children = Array.isArray(children) ? children : [children];
+  render() {
+    return super.render();
   }
-
-  let parsedElement = parser(children[0], {...defaultStyles, ...node.props});
-
-  if (parsedElement.style.display && parsedElement.style.display == 'block') {
-    parsedElement.markup += '\n';
-  }
-
-  return parsedElement;
 }

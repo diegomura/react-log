@@ -1,30 +1,27 @@
-export default function a(parser, node) {
-  const defaultStyles = {
-    color: 'blue',
-    text_decoration: 'underline'
-  }
+import BaseElement from './BaseElement'
 
-  let children = [];
-
-  if (node.props) {
-    children = node.props.children;
-    children = Array.isArray(children) ? children : [children];
-  }
-
-  if (children[0]) {
-    let parsedElement = parser(children[0], {...defaultStyles, ...node.props});
-
-    if (parsedElement.style.display && parsedElement.style.display == 'block') {
-      parsedElement.markup += '\n';
-    }
-
-    parsedElement.markup += ' - ' + node.props.href;
-
-    return parsedElement;
-  } else {
+export default class H1 extends BaseElement {
+  getDefaultStyles() {
     return {
-      markup: '%c' + node.props.href,
-      style: {...defaultStyles, ...node.props}
+      color: 'blue',
+      text_decoration: 'underline'
+    }
+  }
+
+  render() {
+    const { node, parser } = this;
+
+    if (node.props.children) {
+      let renderedElement = super.render();
+
+      renderedElement.markup += ' - ' + node.props.href;
+
+      return renderedElement;
+    } else {
+      return {
+        markup: '%c' + node.props.href,
+        style: {...this.getDefaultStyles(), ...node.props}
+      }
     }
   }
 }

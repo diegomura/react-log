@@ -1,10 +1,23 @@
-export default function body(parser, node) {
-  let children = [];
-
-  if (node.props) {
-    children = node.props.children;
-    children = Array.isArray(children) ? children : [children];
+export default class Body {
+  constructor(node, parser) {
+    this.node = node;
+    this.parser = parser;
   }
 
-  return children.map((item) => parser(item, {}));
+  render() {
+    const { node, parser } = this;
+
+    let children = [];
+
+    if (node.props) {
+      children = node.props.children;
+      children = Array.isArray(children) ? children : [children];
+    }
+
+    return children.map((item) => parser(item, {}));
+  }
+}
+
+export default function body(node, parser) {
+
 }
