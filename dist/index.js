@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = undefined;
 
-var _Log = require('./Log.jsx');
+var _Log = require('./Log');
 
 var _Log2 = _interopRequireDefault(_Log);
 
