@@ -37,17 +37,35 @@ Let's see it in action!
 ```js
 import Log from 'react-log';
 
+const h1Styles = {
+  fontFamily:"Open Sans, sans-serif",
+  color:"white",
+  padding:"10px 20px",
+	//...
+}
+
+const h2Styles = {
+  margin:"0px 0px 20px 20px",
+  padding:"15px",
+  border:"1px solid #CCC",
+	//...
+}
+
+const linkStyles = {
+	//...
+}
+
 //...
 <Log>
-  <h2 color="white" background="tomato" borderRadius="3px" padding="1px 20px">react-log</h2>
-  <p fontSize="110%">Cool things can be done in the console. Did you know that?</p>
-  <h3 display="inline">For more info: </h3>
-  <a href="https://github.com/diegomura/react-log">Github repo</a>
+	<h1 {...h1Styles}>react-log</h1>
+	<h2 {...h2Styles}>Cool things can be done in the console. Did you know that?</h2>
+	<a href="https://github.com/diegomura/react-log" {...linkStyles}>Github repo</a>
 </Log>
 ```
+[See full example](https://github.com/diegomura/react-log/blob/master/examples/index.js)
 
 #### Output
-![banner](https://cloud.githubusercontent.com/assets/5600341/16939152/2b9db54c-4d55-11e6-89e6-c7a19a9f77e2.png)
+![banner](https://cloud.githubusercontent.com/assets/5600341/17076797/edb1eb32-5091-11e6-8c84-579ac50c913c.png)
 
 #### Run the example yourself
 On the root of the project:
