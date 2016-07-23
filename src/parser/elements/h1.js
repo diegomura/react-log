@@ -5,8 +5,8 @@ export default class H1 extends BaseElement {
     return {
       display: 'block',
       color: 'black',
-      font_weight: 'bold',
-      font_size: '2em'
+      fontWeight: 'bold',
+      fontSize: '2em'
     }
   }
 

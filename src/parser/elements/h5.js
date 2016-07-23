@@ -5,8 +5,8 @@ export default class H5 extends BaseElement {
     return {
       display: 'block',
       color: 'black',
-      font_weight: 'bold',
-      font_size: '.83em'
+      fontWeight: 'bold',
+      fontSize: '.83em'
     }
   }
 

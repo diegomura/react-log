@@ -5,7 +5,7 @@ export default class P extends BaseElement {
     return {
       display: 'block',
       color: 'black',
-      margin_left: '8px'
+      marginLeft: '8px'
     }
   }
 

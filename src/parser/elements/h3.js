@@ -5,8 +5,8 @@ export default class H3 extends BaseElement {
     return {
       display: 'block',
       color: 'black',
-      font_weight: 'bold',
-      font_size: '1.17em'
+      fontWeight: 'bold',
+      fontSize: '1.17em'
     }
   }
 

@@ -4,7 +4,7 @@ export default class H1 extends BaseElement {
   getDefaultStyles() {
     return {
       color: 'blue',
-      text_decoration: 'underline'
+      textDecoration: 'underline'
     }
   }
 

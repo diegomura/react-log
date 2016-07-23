@@ -53,6 +53,7 @@
     "watch": "^0.19.1"
   },
   "dependencies": {
+    "css-unit-converter": "^1.0.0",
     "param-case": "^2.1.0"
   }
 }
