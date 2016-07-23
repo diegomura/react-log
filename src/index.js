@@ -1,1 +1,1 @@
-export default from './Log.jsx';
+export default from './Log';
