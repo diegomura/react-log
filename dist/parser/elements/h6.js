@@ -35,8 +35,8 @@ var H6 = function (_BaseElement) {
       return {
         display: 'block',
         color: 'black',
-        font_weight: 'bold',
-        font_size: '.67em'
+        fontWeight: 'bold',
+        fontSize: '.67em'
       };
     }
   }, {

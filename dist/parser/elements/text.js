@@ -4,6 +4,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _BaseElement2 = require('./BaseElement');
@@ -28,14 +30,57 @@ var Text = function (_BaseElement) {
   }
 
   _createClass(Text, [{
+    key: 'getOffset',
+    value: function getOffset(property) {
+      var node = this.node;
+
+
+      if (property) {
+        var marginRegex = /\d+/g;
+        var marginMatch = property.match(marginRegex).map(function (m) {
+          return parseInt(m);
+        });
+
+        switch (marginMatch.length) {
+          case 2:
+            return { top: marginMatch[0], bottom: marginMatch[0], left: marginMatch[1], right: marginMatch[1] };
+          case 4:
+            return { top: marginMatch[0], bottom: marginMatch[2], left: marginMatch[3], right: marginMatch[1] };
+          default:
+            return { top: marginMatch[0], bottom: marginMatch[0], left: marginMatch[0], right: marginMatch[0] };
+        }
+      }
+
+      return { top: 0, bottom: 0, left: 0, right: 0 };
+    }
+  }, {
+    key: 'getFontSize',
+    value: function getFontSize() {
+      var node = this.node;
+
+
+      if (node.style.fontSize) {
+        var regex = /^(\d+(?:\.\d+)?)(.*)$/;
+        var fontSizeMatch = node.style.fontSize.match(regex);
+
+        return parseInt(fontSizeMatch[1]);
+      }
+
+      return 0;
+    }
+  }, {
     key: 'render',
     value: function render() {
       var node = this.node;
 
 
+      var margin = this.getOffset(node.style.margin);
+      var padding = this.getOffset(node.style.padding);
+      var lineHeight = margin.top + margin.bottom + padding.top + padding.bottom + this.getFontSize();
+
       return {
         markup: '%c' + node.markup,
-        style: node.style
+        style: _extends({}, node.style, { lineHeight: lineHeight + 'px' })
       };
     }
   }]);

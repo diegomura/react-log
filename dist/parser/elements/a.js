@@ -36,7 +36,7 @@ var H1 = function (_BaseElement) {
     value: function getDefaultStyles() {
       return {
         color: 'blue',
-        text_decoration: 'underline'
+        textDecoration: 'underline'
       };
     }
   }, {

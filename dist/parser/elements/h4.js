@@ -35,8 +35,8 @@ var H4 = function (_BaseElement) {
       return {
         display: 'block',
         color: 'black',
-        font_weight: 'bold',
-        font_size: '1.17em'
+        fontWeight: 'bold',
+        fontSize: '1.17em'
       };
     }
   }, {
