@@ -42,7 +42,7 @@ const h1Styles = {
   color:"white",
   padding:"10px 20px",
   borderRadius:"8px",
-  background:"-webkit-linear-gradient(...)
+  background:"-webkit-linear-gradient(...)",
 	//...
 }
 
