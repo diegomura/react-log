@@ -41,6 +41,8 @@ const h1Styles = {
   fontFamily:"Open Sans, sans-serif",
   color:"white",
   padding:"10px 20px",
+  borderRadius:"8px",
+  background:"-webkit-linear-gradient(...)",
 	//...
 }
 
