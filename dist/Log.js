@@ -38,6 +38,25 @@ var Log = function (_React$Component) {
   _createClass(Log, [{
     key: 'componentDidMount',
     value: function componentDidMount() {
+      this.log();
+    }
+  }, {
+    key: 'componentDidUpdate',
+    value: function componentDidUpdate() {
+      this.log();
+    }
+  }, {
+    key: 'componentWillUpdate',
+    value: function componentWillUpdate() {
+      if (console.clear) {
+        console.clear();
+      } else {
+        clear();
+      }
+    }
+  }, {
+    key: 'log',
+    value: function log() {
       var _console;
 
       var children = this.props.children;
