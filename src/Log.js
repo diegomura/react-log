@@ -4,6 +4,22 @@ import { serializeStyleObject } from './utils/styleObjectSerializer'
 
 class Log extends React.Component {
   componentDidMount() {
+    this.log();
+  }
+
+  componentDidUpdate() {
+    this.log();
+  }
+
+  componentWillUpdate () {
+    if (console.clear) {
+      console.clear();
+    } else {
+      clear();
+    }
+  }
+
+  log() {
     const { children } = this.props;
     const { type, props } = children;
 

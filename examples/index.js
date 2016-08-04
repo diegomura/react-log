@@ -1,34 +1,43 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Log from 'react-log';
+import moment from 'moment';
+import styles from './styles';
 
-const h1Styles = {
-  fontFamily:"Open Sans, sans-serif",
-  color:"white",
-  padding:"10px 20px",
-  margin:"50px 30px 0px 0px",
-  borderRadius:"8px",
-  fontSize:"35px",
-  background:"-webkit-linear-gradient(-55deg, #a2d49f 30%, #a2d49f 40%, #c7c12f 40%, #c7c12f 50%, #f26247 50%, #f26247 60%, #ec2045 60%, #ec2045 70%);"
-}
+class LogExample extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {date: this.getCurrentDate()}
+  }
 
-const h2Styles = {
-  margin:"0px 0px 20px 20px",
-  padding:"15px",
-  border:"1px solid #CCC",
-  borderRadius:"5px"
-}
+  componentDidMount() {
+    setInterval(this.updateCurrentDate.bind(this), 1000)
+  }
 
-const linkStyles = {
-  margin:"25px 0px",
-  fontSize:"15px"
+  updateCurrentDate() {
+    this.setState({date: this.getCurrentDate()});
+  }
+
+  getCurrentDate() {
+    return moment().format('MMMM Do YYYY, h:mm:ss a');
+  }
+
+  render() {
+    let { date } = this.state;
+
+    return (
+      <Log>
+        <h1 {...styles.h1Styles}>react-log</h1>
+        <h2 {...styles.h2Styles}>Cool things can be done in the console. Did you know that?</h2>
+        <h3 {...styles.h3Styles}>With react-log, state changes will be reflected on the console:</h3>
+        <p {...styles.dateStyles}>{date}</p>
+        <a href="https://github.com/diegomura/react-log" {...styles.linkStyles}>For more info</a>
+      </Log>
+    );
+  }
 }
 
 ReactDOM.render(
-  <Log>
-    <h1 {...h1Styles}>react-log</h1>
-    <h2 {...h2Styles}>Cool things can be done in the console. Did you know that?</h2>
-    <a href="https://github.com/diegomura/react-log" {...linkStyles}>Github repo</a>
-  </Log>,
+  <LogExample/>,
   document.getElementById('root')
 )

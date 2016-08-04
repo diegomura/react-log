@@ -5,6 +5,7 @@
   "main": "bundle.js",
   "dependencies": {
     "css-loader": "^0.23.1",
+    "moment": "^2.14.1",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
