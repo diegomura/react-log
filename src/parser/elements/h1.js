@@ -4,9 +4,11 @@ export default class H1 extends BaseElement {
   getDefaultStyles() {
     return {
       display: 'block',
-      color: 'black',
+      fontFamily: 'Times New Roman',
+      fontSize: '32px',
       fontWeight: 'bold',
-      fontSize: '2em'
+      color: 'black',
+      margin: '12px 0px',
     }
   }
 

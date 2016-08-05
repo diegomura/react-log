@@ -3,25 +3,24 @@ import BaseElement from './BaseElement'
 export default class H1 extends BaseElement {
   getDefaultStyles() {
     return {
+      fontFamily: 'Times New Roman',
+      fontSize: '16px',
       color: 'blue',
+      margin: '12px 0px',
       textDecoration: 'underline'
     }
   }
 
   render() {
     const { node, parser } = this;
+    let markup = '';
 
     if (node.props.children) {
-      let renderedElement = super.render();
-
-      renderedElement.markup += ' - ' + node.props.href;
-
-      return renderedElement;
-    } else {
-      return {
-        markup: '%c' + node.props.href,
-        style: {...this.getDefaultStyles(), ...node.props}
-      }
+      markup += node.props.children + ' - ';
     }
+
+    markup += node.props.href
+
+    return parser(markup, {...this.getDefaultStyles(), ...node.props})
   }
 }

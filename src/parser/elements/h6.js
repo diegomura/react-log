@@ -4,9 +4,11 @@ export default class H6 extends BaseElement {
   getDefaultStyles() {
     return {
       display: 'block',
-      color: 'black',
+      fontFamily: 'Times New Roman',
+      fontSize: '11px',
       fontWeight: 'bold',
-      fontSize: '.67em'
+      color: 'black',
+      margin: '12px 0px'
     }
   }
 

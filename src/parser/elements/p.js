@@ -4,8 +4,9 @@ export default class P extends BaseElement {
   getDefaultStyles() {
     return {
       display: 'block',
-      color: 'black',
-      marginLeft: '8px'
+      fontFamily: 'Times New Roman',
+      fontSize: '16px',
+      color: 'black'
     }
   }
 

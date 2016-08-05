@@ -4,9 +4,11 @@ export default class H5 extends BaseElement {
   getDefaultStyles() {
     return {
       display: 'block',
-      color: 'black',
+      fontFamily: 'Times New Roman',
+      fontSize: '13px',
       fontWeight: 'bold',
-      fontSize: '.83em'
+      color: 'black',
+      margin: '12px 0px'
     }
   }
 

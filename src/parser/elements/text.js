@@ -43,7 +43,14 @@ export default class Text extends BaseElement {
 
     return {
       markup: '%c' + node.markup,
-      style: { ...node.style, lineHeight: lineHeight + 'px' }
+      style: {
+        lineHeight: lineHeight + 'px',
+        marginLeft: margin.left,
+        marginRight: margin.right,
+        paddingLeft: padding.left,
+        paddingRight: padding.right,
+        ...node.style
+      }
     }
   }
 }
