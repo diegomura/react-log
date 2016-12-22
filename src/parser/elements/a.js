@@ -1,4 +1,4 @@
-import BaseElement from './BaseElement'
+import BaseElement from './baseElement'
 
 export default class H1 extends BaseElement {
   getDefaultStyles() {

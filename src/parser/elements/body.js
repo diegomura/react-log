@@ -18,6 +18,3 @@ export default class Body {
   }
 }
 
-export default function body(node, parser) {
-
-}
