@@ -1,4 +1,4 @@
-import BaseElement from './BaseElement'
+import BaseElement from './BaseElement';
 
 export default class H1 extends BaseElement {
   getDefaultStyles() {
@@ -7,8 +7,8 @@ export default class H1 extends BaseElement {
       fontSize: '16px',
       color: 'blue',
       margin: '12px 0px',
-      textDecoration: 'underline'
-    }
+      textDecoration: 'underline',
+    };
   }
 
   render() {
@@ -16,11 +16,11 @@ export default class H1 extends BaseElement {
     let markup = '';
 
     if (node.props.children) {
-      markup += node.props.children + ' - ';
+      markup += `${node.props.children}  - `;
     }
 
-    markup += node.props.href
+    markup += node.props.href;
 
-    return parser(markup, {...this.getDefaultStyles(), ...node.props})
+    return parser(markup, { ...this.getDefaultStyles(), ...node.props });
   }
 }

@@ -1,4 +1,4 @@
-import BaseElement from './BaseElement'
+import BaseElement from './BaseElement';
 
 export default class H4 extends BaseElement {
   getDefaultStyles() {
@@ -8,8 +8,8 @@ export default class H4 extends BaseElement {
       fontSize: '16px',
       fontWeight: 'bold',
       color: 'black',
-      margin: '12px 0px'
-    }
+      margin: '12px 0px',
+    };
   }
 
   render() {

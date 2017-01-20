@@ -17,7 +17,3 @@ export default class Body {
     return children.map((item) => parser(item, {}));
   }
 }
-
-export default function body(node, parser) {
-
-}

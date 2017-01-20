@@ -1,17 +1,13 @@
-import React, { PropTypes } from 'react'
-import parser from './parser'
-import { serializeStyleObject } from './utils/styleObjectSerializer'
+import React, { PropTypes } from 'react';
+import parser from './parser';
+import { serializeStyleObject } from './utils/styleObjectSerializer';
 
 class Log extends React.Component {
   componentDidMount() {
     this.log();
   }
 
-  componentDidUpdate() {
-    this.log();
-  }
-
-  componentWillUpdate () {
+  componentWillUpdate() {
     if (console.clear) {
       console.clear();
     } else {
@@ -19,9 +15,12 @@ class Log extends React.Component {
     }
   }
 
+  componentDidUpdate() {
+    this.log();
+  }
+
   log() {
     const { children } = this.props;
-    const { type, props } = children;
 
     const body = React.createElement('body', null, children);
     const parsedData = parser(body);
@@ -35,5 +34,9 @@ class Log extends React.Component {
     return false;
   }
 }
+
+Log.propTypes = {
+  children: PropTypes.node,
+};
 
 export default Log;

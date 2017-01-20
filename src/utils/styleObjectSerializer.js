@@ -1,11 +1,11 @@
-import paramCase from 'param-case'
+import paramCase from 'param-case';
 
 export function serializeStyleObject(styleObject) {
   let serializedObject = '';
 
-  for (var key in styleObject) {
+  for (let key in styleObject) {
     if (styleObject.hasOwnProperty(key)) {
-      serializedObject += paramCase(key) + ':' + styleObject[key] + ';';
+      serializedObject += `${paramCase(key)}:${styleObject[key]};`;
     }
   }
 

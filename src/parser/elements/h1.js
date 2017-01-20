@@ -1,4 +1,4 @@
-import BaseElement from './BaseElement'
+import BaseElement from './BaseElement';
 
 export default class H1 extends BaseElement {
   getDefaultStyles() {
@@ -9,7 +9,7 @@ export default class H1 extends BaseElement {
       fontWeight: 'bold',
       color: 'black',
       margin: '12px 0px',
-    }
+    };
   }
 
   render() {

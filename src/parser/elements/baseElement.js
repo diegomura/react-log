@@ -18,9 +18,9 @@ export default class BaseElement {
       children = Array.isArray(children) ? children : [children];
     }
 
-    let parsedElement = parser(children[0], {...this.getDefaultStyles(), ...node.props});
+    const parsedElement = parser(children[0], { ...this.getDefaultStyles(), ...node.props });
 
-    if (parsedElement.style.display && parsedElement.style.display == 'block') {
+    if (parsedElement.style.display && parsedElement.style.display === 'block') {
       parsedElement.markup += '\n';
     }
 

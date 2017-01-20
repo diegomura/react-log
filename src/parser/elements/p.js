@@ -1,4 +1,4 @@
-import BaseElement from './BaseElement'
+import BaseElement from './BaseElement';
 
 export default class P extends BaseElement {
   getDefaultStyles() {
@@ -6,8 +6,8 @@ export default class P extends BaseElement {
       display: 'block',
       fontFamily: 'Times New Roman',
       fontSize: '16px',
-      color: 'black'
-    }
+      color: 'black',
+    };
   }
 
   render() {
