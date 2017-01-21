@@ -1,0 +1,23 @@
+{
+  "parser"  : "babel-eslint",
+  "extends" : [
+    "standard",
+    "standard-react"
+  ],
+  "plugins": [
+    "babel"
+  ],
+  "env"     : {
+    "es6" : true,
+    "browser" : true
+  },
+  "globals" : {
+    "API_URL": false
+  },
+  "rules": {
+    "semi" : ["error", "always"],
+    "max-len": [2, 120, 2],
+    "generator-star-spacing": 0,
+    "babel/generator-star-spacing": 1
+  }
+}
