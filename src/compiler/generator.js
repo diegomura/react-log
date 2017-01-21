@@ -35,10 +35,14 @@ const generator = (node) => {
   //  * For a `text` element (leafs of the tree), we simple prepend a `%c` needed to apply styles.
   switch (node.type) {
     case 'body':
-    case 'span':
     case 'ul':
     case 'ol':
       return renderedChildren;
+    case 'span':
+      return {
+        value: '%c' + renderedChildren.value,
+        styles: renderedChildren.styles
+      };
     case 'div':
     case 'h1':
     case 'h2':
@@ -48,23 +52,21 @@ const generator = (node) => {
     case 'h6':
     case 'p':
       return {
-        value: `${renderedChildren.value}\n`,
+        value: `%c${renderedChildren.value}\n`,
         styles: renderedChildren.styles
       };
     case 'a':
       const markup = renderedChildren.value ? `${renderedChildren.value}  - ` : '';
       return {
-        value: markup + node.props.href,
+        value: '%c' + markup + node.props.href,
         styles: renderedChildren.styles
       };
     case 'text':
       return {
-        value: `%c${children}`,
+        value: `${children}`,
         styles: otherProps
       };
     case 'li':
-      // We remove the `%c` from the text to add it before the bullet
-      renderedChildren.value = renderedChildren.value.substring(2);
       return {
         value: `%c${node.props.bullet} ${renderedChildren.value}\n`,
         styles: renderedChildren.styles
