@@ -2,13 +2,13 @@
  * Visits each node of the AST calling specific callbacks for each node type.
 **/
 const traverser = (ast, visitor) => {
-  function traverseArray(array, parent) {
+  function traverseArray (array, parent) {
     array.forEach(child => {
       traverseNode(child, parent);
     });
   }
 
-  function traverseNode(node, parent) {
+  function traverseNode (node, parent) {
     const methods = visitor[node.type];
 
     if (methods && methods.enter) {

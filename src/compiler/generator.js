@@ -21,7 +21,7 @@ const generator = (node) => {
         value: renderedChildren.map(child => child.value).join(''),
         styles: renderedChildren.reduce((accumulator, child) => (
           accumulator.concat(child.styles)), []
-        ),
+        )
       };
     } else {
       // If the node child is another node, we simply generate it's represetation.
@@ -47,18 +47,18 @@ const generator = (node) => {
     case 'p':
       return {
         value: `${renderedChildren.value}\n`,
-        styles: renderedChildren.styles,
+        styles: renderedChildren.styles
       };
     case 'a':
       const markup = renderedChildren.value ? `${renderedChildren.value}  - ` : '';
       return {
         value: markup + node.props.href,
-        styles: renderedChildren.styles,
+        styles: renderedChildren.styles
       };
     case 'text':
       return {
         value: `%c${children}`,
-        styles: otherProps,
+        styles: otherProps
       };
     default:
       throw new TypeError(node.type);

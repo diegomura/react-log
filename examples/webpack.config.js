@@ -4,14 +4,14 @@ module.exports = {
   entry: './index.js',
   output: {
     path: __dirname,
-    filename: "bundle.js"
+    filename: 'bundle.js'
   },
   devtool: 'source-map',
   module: {
     loaders: [
       {
         test: /\.css$/,
-        loader: "style!css"
+        loader: 'style!css'
       },
       {
         test: /\.(js|jsx)$/,
@@ -25,7 +25,7 @@ module.exports = {
   },
   resolve: {
     alias: {
-      'react-log$': path.join(__dirname, '..', 'src'),
-    },
+      'react-log$': path.join(__dirname, '..', 'src')
+    }
   }
-}
+};

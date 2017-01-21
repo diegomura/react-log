@@ -11,10 +11,10 @@ module.exports = {
   output: {
     path: __dirname + '/dist',
     filename: '[name].bundle.js',
-    publicPath: '/',
+    publicPath: '/'
   },
   devServer: {
-    contentBase: __dirname + '/src',
+    contentBase: __dirname + '/src'
   },
   devtool: 'source-map',
   module: {
@@ -27,29 +27,29 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          "style-loader",
-          "css-loader?modules=true&localIdentName=[name]__[local]___[hash:base64:5]"
-        ],
+          'style-loader',
+          'css-loader?modules=true&localIdentName=[name]__[local]___[hash:base64:5]'
+        ]
       },
       {
         test: /\.(sass|scss)$/,
         use: [
-          "style-loader",
-          "css-loader?modules=true&localIdentName=[name]__[local]___[hash:base64:5]",
-          "sass-loader",
+          'style-loader',
+          'css-loader?modules=true&localIdentName=[name]__[local]___[hash:base64:5]',
+          'sass-loader'
         ]
       },
       {
         test: /\.(png|jpg)$/,
         loader: 'url-loader?limit=8192'
-      },
-    ],
+      }
+    ]
   },
   plugins: [
-   new HtmlWebpackPlugin({
-     template: 'index.html',
-     inject: 'body',
-     filename: 'index.html'
-   })
+    new HtmlWebpackPlugin({
+      template: 'index.html',
+      inject: 'body',
+      filename: 'index.html'
+    })
   ]
 };

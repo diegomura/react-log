@@ -4,15 +4,15 @@ import Log from 'react-log';
 import styles from './styles';
 
 class LogExample extends React.Component {
-  render() {
+  render () {
     return (
       <Log>
-        <div>Meetup</div>
+        <div {...styles.lightText}>Meetup</div>
         <div>
-          <span>React</span>
-          <span>JS</span>
+          <span {...styles.boldText}>React</span>
+          <span {...styles.tag}>JS</span>
         </div>
-        <div>Uruguay</div>
+        <div {...styles.boldText}>Uruguay</div>
         <a href='http://google.com'>Google</a>
       </Log>
     );

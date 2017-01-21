@@ -1,13 +1,13 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import compiler from './compiler';
 import { serializeStyleObject } from './utils/styleObjectSerializer';
 
 class Log extends React.Component {
-  componentDidMount() {
+  componentDidMount () {
     this.log();
   }
 
-  componentWillUpdate() {
+  componentWillUpdate () {
     if (console.clear) {
       console.clear();
     } else {
@@ -15,11 +15,11 @@ class Log extends React.Component {
     }
   }
 
-  componentDidUpdate() {
+  componentDidUpdate () {
     this.log();
   }
 
-  log() {
+  log () {
     const { children } = this.props;
 
     const body = React.createElement('body', null, children);
@@ -29,13 +29,9 @@ class Log extends React.Component {
     console.log(compiledData.value, ...styles);
   }
 
-  render() {
+  render () {
     return false;
   }
 }
-
-Log.propTypes = {
-  children: PropTypes.node,
-};
 
 export default Log;

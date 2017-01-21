@@ -1,6 +1,6 @@
 import paramCase from 'param-case';
 
-export function serializeStyleObject(styleObject) {
+export const serializeStyleObject = (styleObject) => {
   let serializedObject = '';
 
   for (let key in styleObject) {
@@ -10,4 +10,4 @@ export function serializeStyleObject(styleObject) {
   }
 
   return serializedObject.replace('_', '-');
-}
+};

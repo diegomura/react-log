@@ -18,7 +18,7 @@ const mergeDefaultProps = (node, parent, defaultProps) => {
   if (typeof newProps.children === 'string') {
     newProps.children = {
       type: 'text',
-      props: { ...newProps },
+      props: { ...newProps }
     };
   }
 
@@ -35,101 +35,101 @@ const transformer = (ast) => {
 
   traverser(newAst, {
     div: {
-      enter(node, parent) {
+      enter (node, parent) {
         node.props = mergeDefaultProps(node, parent, { color: 'black' });
-      },
+      }
     },
     span: {
-      enter(node, parent) {
+      enter (node, parent) {
         node.props = mergeDefaultProps(node, parent, { color: 'black' });
-      },
+      }
     },
     h1: {
-      enter(node, parent) {
+      enter (node, parent) {
         node.props = mergeDefaultProps(node, parent, {
           fontFamily: 'Times New Roman',
           fontSize: '32px',
           fontWeight: 'bold',
           color: 'black',
-          margin: '12px 0px',
+          margin: '12px 0px'
         });
-      },
+      }
     },
     h2: {
-      enter(node, parent) {
+      enter (node, parent) {
         node.props = mergeDefaultProps(node, parent, {
           fontFamily: 'Times New Roman',
           fontSize: '24px',
           fontWeight: 'bold',
           color: 'black',
-          margin: '12px 0px',
+          margin: '12px 0px'
         });
-      },
+      }
     },
     h3: {
-      enter(node, parent) {
+      enter (node, parent) {
         node.props = mergeDefaultProps(node, parent, {
           fontFamily: 'Times New Roman',
           fontSize: '19px',
           fontWeight: 'bold',
           color: 'black',
-          margin: '12px 0px',
+          margin: '12px 0px'
         });
-      },
+      }
     },
     h4: {
-      enter(node, parent) {
+      enter (node, parent) {
         node.props = mergeDefaultProps(node, parent, {
           fontFamily: 'Times New Roman',
           fontSize: '16px',
           fontWeight: 'bold',
           color: 'black',
-          margin: '12px 0px',
+          margin: '12px 0px'
         });
-      },
+      }
     },
     h5: {
-      enter(node, parent) {
+      enter (node, parent) {
         node.props = mergeDefaultProps(node, parent, {
           fontFamily: 'Times New Roman',
           fontSize: '13px',
           fontWeight: 'bold',
           color: 'black',
-          margin: '12px 0px',
+          margin: '12px 0px'
         });
-      },
+      }
     },
     h6: {
-      enter(node, parent) {
+      enter (node, parent) {
         node.props = mergeDefaultProps(node, parent, {
           fontFamily: 'Times New Roman',
           fontSize: '11px',
           fontWeight: 'bold',
           color: 'black',
-          margin: '12px 0px',
+          margin: '12px 0px'
         });
-      },
+      }
     },
     p: {
-      enter(node, parent) {
+      enter (node, parent) {
         node.props = mergeDefaultProps(node, parent, {
           fontFamily: 'Times New Roman',
           fontSize: '16px',
-          color: 'black',
+          color: 'black'
         });
-      },
+      }
     },
     a: {
-      enter(node, parent) {
+      enter (node, parent) {
         node.props = mergeDefaultProps(node, parent, {
           fontFamily: 'Times New Roman',
           fontSize: '16px',
           color: 'blue',
           margin: '12px 0px',
-          textDecoration: 'underline',
+          textDecoration: 'underline'
         });
-      },
-    },
+      }
+    }
   });
 
   return newAst;
