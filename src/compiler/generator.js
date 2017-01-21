@@ -1,5 +1,3 @@
-import logElements from './elements';
-
 /**
  * Code generator will recursively call itself to print each node in
  * the tree into an object with the following schema:
