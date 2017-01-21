@@ -20,6 +20,16 @@ const mergeDefaultProps = (node, parent, defaultProps) => {
       type: 'text',
       props: { ...newProps }
     };
+  } else {
+    newProps.children = newProps.children.map((child) => {
+      if (typeof child === 'string') {
+        return {
+          type: 'text',
+          props: { ...newProps, children: child }
+        };
+      }
+      return child;
+    });
   }
 
   return newProps;
