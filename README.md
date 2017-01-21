@@ -84,12 +84,6 @@ The server should be listening now on `http://localhost:8080`
 Tested and working on Chrome 51 and Firefox 45.
 Does not work on Safari or IE as far I've seen. Yet.
 
-## Roadmap
-* [ ] Demo page
-* [ ] Img element support
-* [ ] Add more examples
-* [ ] Docs of avaliable elements and props
-
 ## License
 
 MIT © [Diego Muracciole](http://github.com/diegomura)
