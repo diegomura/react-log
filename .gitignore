@@ -5,3 +5,4 @@ node_modules
 tmp
 coverage
 npm-debug.log
+dist
