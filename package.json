@@ -2,14 +2,8 @@
   "name": "react-log",
   "version": "2.0.1",
   "description": "React for the Console",
-  "main": "dist/index.js",
-  "files": [
-    "bin/",
-    "dist/"
-  ],
+  "main": "src/index.js",
   "scripts": {
-    "clean": "rimraf dist",
-    "lint": "eslint src test",
     "build": "babel --optional runtime src -d dist",
     "deploy": "git pull --rebase origin master && git push origin master"
   },
@@ -42,15 +36,14 @@
     "babel-preset-react": "^6.5.0",
     "babel-preset-stage-0": "^6.5.0",
     "dependency-check": "^2.5.1",
-    "doctoc": "^1.2.0",
-    "eslint": "^2.13.1",
-    "eslint-config-airbnb": "^9.0.1",
-    "eslint-plugin-import": "^1.9.2",
-    "eslint-plugin-jsx-a11y": "^1.5.3",
-    "eslint-plugin-react": "^5.2.2",
-    "react": "^15.1.0",
-    "rimraf": "^2.5.2",
-    "watch": "^0.19.1"
+    "eslint": "^3.9.1",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-config-standard-react": "^4.2.0",
+    "eslint-plugin-babel": "^3.3.0",
+    "eslint-plugin-promise": "^3.3.1",
+    "eslint-plugin-react": "^6.6.0",
+    "eslint-plugin-standard": "^2.0.1",
+    "react": "^15.1.0"
   },
   "dependencies": {
     "css-unit-converter": "^1.0.0",
