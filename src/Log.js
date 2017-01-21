@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import parser from './parser';
+import compiler from './compiler';
 import { serializeStyleObject } from './utils/styleObjectSerializer';
 
 class Log extends React.Component {
@@ -23,11 +23,10 @@ class Log extends React.Component {
     const { children } = this.props;
 
     const body = React.createElement('body', null, children);
-    const parsedData = parser(body);
-    const logMarkup = parsedData.map((item) => item.markup).join('');
-    const logStyles = parsedData.map((item) => serializeStyleObject(item.style));
+    const compiledData = compiler(body);
+    const styles = compiledData.styles.map((item) => serializeStyleObject(item));
 
-    console.log(logMarkup, ...logStyles);
+    console.log(compiledData.value, ...styles);
   }
 
   render() {

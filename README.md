@@ -87,7 +87,6 @@ Does not work on Safari or IE as far I've seen. Yet.
 ## Roadmap
 * [ ] Demo page
 * [ ] Img element support
-* [ ] Nested elements support
 * [ ] Add more examples
 * [ ] Docs of avaliable elements and props
 

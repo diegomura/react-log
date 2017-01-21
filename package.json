@@ -54,6 +54,7 @@
   },
   "dependencies": {
     "css-unit-converter": "^1.0.0",
+    "lodash.clonedeep": "^4.5.0",
     "param-case": "^2.1.0"
   }
 }

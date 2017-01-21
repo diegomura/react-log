@@ -7,12 +7,13 @@ class LogExample extends React.Component {
   render() {
     return (
       <Log>
-        <div {...styles.lightText}>Meetup</div>
+        <div>Meetup</div>
         <div>
-          <span {...styles.boldText}>React</span>
-          <span {...styles.tag}>JS</span>
+          <span>React</span>
+          <span>JS</span>
         </div>
-        <div {...styles.boldText}>Uruguay</div>
+        <div>Uruguay</div>
+        <a href='http://google.com'>Google</a>
       </Log>
     );
   }
