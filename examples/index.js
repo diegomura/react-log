@@ -30,7 +30,7 @@ class LogExample extends React.Component {
           <li>Three</li>
         </ol>
         <h1 {...styles.heading}>Links:</h1>
-        <a href='https://github.com/diegomura/react-log'>React-log</a>
+        <a href='https://github.com/diegomura/react-log' display='block'>React-log</a>
         <h1 {...styles.heading}>Paragraphs:</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>

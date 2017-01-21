@@ -57,8 +57,10 @@ const generator = (node) => {
       };
     case 'a':
       const markup = renderedChildren.value ? `${renderedChildren.value}  - ` : '';
+      const newLine = node.props.display === 'block' ? '\n' : '';
+
       return {
-        value: '%c' + markup + node.props.href,
+        value: '%c' + markup + node.props.href + newLine,
         styles: renderedChildren.styles
       };
     case 'text':
