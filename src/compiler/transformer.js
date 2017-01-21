@@ -129,6 +129,24 @@ const transformer = (ast) => {
           textDecoration: 'underline'
         });
       }
+    },
+    ol: {
+      enter (node, parent) {
+        // Used to track `li`s index
+        node._index = 1;
+      }
+    },
+    li: {
+      enter (node, parent) {
+        const bullet = parent.type === 'ol' ? `${parent._index++} -` : '•';
+
+        node.props = mergeDefaultProps(node, parent, {
+          fontFamily: 'Times New Roman',
+          fontSize: '16px',
+          color: 'black',
+          bullet
+        });
+      }
     }
   });
 

@@ -27,6 +27,9 @@ const traverser = (ast, visitor) => {
       case 'h6':
       case 'p':
       case 'a':
+      case 'ul':
+      case 'ol':
+      case 'li':
         if (Array.isArray(node.props.children)) {
           traverseArray(node.props.children, node);
         } else {

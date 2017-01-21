@@ -36,6 +36,8 @@ const generator = (node) => {
   switch (node.type) {
     case 'body':
     case 'span':
+    case 'ul':
+    case 'ol':
       return renderedChildren;
     case 'div':
     case 'h1':
@@ -59,6 +61,13 @@ const generator = (node) => {
       return {
         value: `%c${children}`,
         styles: otherProps
+      };
+    case 'li':
+      // We remove the `%c` from the text to add it before the bullet
+      renderedChildren.value = renderedChildren.value.substring(2);
+      return {
+        value: `%c${node.props.bullet} ${renderedChildren.value}\n`,
+        styles: renderedChildren.styles
       };
     default:
       throw new TypeError(node.type);
