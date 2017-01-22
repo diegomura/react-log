@@ -44,11 +44,99 @@ _Pretty neat, eh?_
 
 ## Components
 ### Headings
+```jsx
+<Log>
+  <h1>Lorem ipsum</h1>
+  <h2>Lorem ipsum</h2>
+  <h3>Lorem ipsum</h3>
+  <h4>Lorem ipsum</h4>
+  <h5>Lorem ipsum</h5>
+  <h6>Lorem ipsum</h6>
+</Log>
+```
 ### Lists
+```jsx
+<Log>
+  <ul>
+    <li>One</li>
+    <li>Two</li>
+    <li>Three</li>
+  </ul>
+
+  <ol>
+    <li>One</li>
+    <li>Two</li>
+    <li>Three</li>
+  </ol>
+</Log>
+```
 ### Paragraph
+```jsx
+<Log>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</Log>
+```
 ### Links
+```jsx
+<Log>
+  <a href="https://twitter.com/diegomura">Twitter</a>
+  <a href="https://github.com/diegomura">Github</a>
+</Log>
+```
 ### Layout
+```jsx
+<Log>
+  <div>
+    OuterDiv
+    <div>InnerDiv1</div>
+    <div>InnerDiv2</div>
+  </div>
+</Log>
+```
 
 ## Styling
+_Not written yet!_
 
 ## Other examples
+
+### Stateful Components
+It is also possible to render stateful components into the Console.
+Each time the component updates, the console is cleared and everything gets rendered again.
+
+```js
+import moment from 'moment';
+
+class DynamicLogger extends React.Component {
+  constructor (props) {
+    super(props);
+
+    this.state = { date: this.getCurrentDate() };
+  }
+
+  componentDidMount() {
+    setInterval(this.updateCurrentDate.bind(this), 1000);
+  }
+
+  updateCurrentDate() {
+    this.setState({date: this.getCurrentDate()});
+  }
+
+  getCurrentDate() {
+    return moment().format('MMMM Do YYYY, h:mm:ss a');
+  }
+
+  render() {
+    const { date } = this.state;
+
+    return (
+      <Log>
+        <p>{date}</p>
+      </Log>
+    );
+  }
+}
+```
+
+### Binding DOM with Console
+_Not written yet!_
