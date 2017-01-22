@@ -1,8 +1,8 @@
 {
   "name": "react-log",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "React for the Console",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "babel --optional runtime src -d dist",
     "deploy": "git pull --rebase origin master && git push origin master"
