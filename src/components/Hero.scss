@@ -1,6 +1,6 @@
 .hero {
   display: flex;
-  height: 320px;
+  height: 420px;
   background: white;
   position: relative;
   align-items: center;
@@ -18,6 +18,7 @@
   }
 
   h1 {
+    margin: 0px;
     font-size: 75px;
     font-weight: normal;
 
@@ -32,6 +33,13 @@
       border-radius: 5px;
       border-bottom: 2px solid black
     }
+  }
+
+  h2 {
+    margin: 0px;
+    color: #989898;
+    margin-top: 8px;
+    font-weight: normal;
   }
 
   iframe {

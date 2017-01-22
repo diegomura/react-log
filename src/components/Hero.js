@@ -10,6 +10,7 @@ class Hero extends PureComponent {
           React
           <span>log</span>
         </h1>
+        <h2>React for the Console</h2>
         <iframe
           src='https://ghbtns.com/github-btn.html?user=diegomura&repo=react-log&type=star&count=true&size=large'
           frameBorder='0'

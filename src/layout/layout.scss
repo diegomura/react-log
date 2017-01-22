@@ -23,7 +23,31 @@ body {
 }
 
 section {
-  margin: 0px 20%;
-  margin-top: 20px;
-  text-align: center;
+  margin: 30px 20%;
+}
+
+h2 {
+  margin: 55px 0px 20px 0px;
+}
+
+h3 {
+  margin: 30px 0px 10px 0px;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+pre {
+  padding: 10px;
+  font-size: 1.3em;
+  margin: 10px 0px;
+  background: white;
+  border-radius: 4px;
+  border: 1px solid #e6e6e6;
+  border-bottom: 3px solid #cacaca;
+}
+
+code {
+  background: white !important;
 }
