@@ -11,6 +11,10 @@ class App extends React.Component {
       <main>
         <ConsoleNav />
         <Hero />
+        <section>
+          <p>Open your Console and see it in action!</p>
+          <b>Under construction. More to come in the future</b>
+        </section>
 
         <Log>
           <h1
