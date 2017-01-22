@@ -6,7 +6,8 @@
   "author": "Diego Muracciole <diegomuracciole@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server --inline --history-api-fallback"
+    "start": "webpack-dev-server --inline --history-api-fallback",
+    "build": "webpack -p"
   },
   "devDependencies": {
     "babel-core": "^6.18.2",
