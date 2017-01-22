@@ -3770,9 +3770,9 @@ react-dom@^15.4.2:
     loose-envify "^1.1.0"
     object-assign "^4.1.0"
 
-react-log@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/react-log/-/react-log-2.0.1.tgz#315bae5906295864ce6e780baa43ed45e1077ff6"
+react-log@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/react-log/-/react-log-2.1.0.tgz#cc1f794d056893befaa5fbfac81112ea4b8f665e"
   dependencies:
     css-unit-converter "^1.0.0"
     lodash.clonedeep "^4.5.0"

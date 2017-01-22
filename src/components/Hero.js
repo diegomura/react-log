@@ -7,7 +7,7 @@ class Hero extends PureComponent {
       <div className='hero'>
         <span>></span>
         <h1>
-          react
+          React
           <span>log</span>
         </h1>
         <iframe
