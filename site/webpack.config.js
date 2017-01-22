@@ -28,14 +28,14 @@ module.exports = {
         test: /\.css$/,
         use: [
           'style-loader',
-          'css-loader?modules=true&localIdentName=[name]__[local]___[hash:base64:5]'
+          'css-loader'
         ]
       },
       {
         test: /\.(sass|scss)$/,
         use: [
           'style-loader',
-          'css-loader?modules=true&localIdentName=[name]__[local]___[hash:base64:5]',
+          'css-loader',
           'sass-loader'
         ]
       },

@@ -6,7 +6,7 @@
   "author": "Diego Muracciole <diegomuracciole@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "node server"
+    "start": "webpack-dev-server --inline --history-api-fallback"
   },
   "devDependencies": {
     "babel-core": "^6.18.2",
@@ -33,6 +33,7 @@
   "dependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "react-log": "^2.0.1"
+    "react-log": "^2.0.1",
+    "url-loader": "^0.5.7"
   }
 }
