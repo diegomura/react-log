@@ -1,41 +1,21 @@
 {
-  "name": "react-log",
-  "version": "2.0.1",
-  "description": "React for the Console",
-  "main": "src/index.js",
-  "scripts": {
-    "build": "babel --optional runtime src -d dist",
-    "deploy": "git pull --rebase origin master && git push origin master"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/diegomura/react-log"
-  },
-  "keywords": [
-    "react",
-    "log",
-    "console",
-    "style"
-  ],
-  "author": " <diegomuracciole@gmail.com>",
+  "name": "react-log-site",
+  "version": "1.0.0",
+  "description": "react-log site",
+  "main": "index.js",
+  "author": "Diego Muracciole <diegomuracciole@gmail.com>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/diegomura/react-log/issues"
-  },
-  "homepage": "https://github.com/diegomura/react-log",
-  "peerDependencies": {
-    "react": "*",
-    "react-dom": "*"
+  "scripts": {
+    "start": "webpack-dev-server --inline --history-api-fallback"
   },
   "devDependencies": {
-    "babel-cli": "^6.10.1",
-    "babel-core": "^6.10.4",
-    "babel-loader": "^6.2.4",
-    "babel-eslint": "^6.1.0",
-    "babel-preset-es2015": "^6.9.0",
-    "babel-preset-react": "^6.5.0",
-    "babel-preset-stage-0": "^6.5.0",
-    "dependency-check": "^2.5.1",
+    "babel-core": "^6.18.2",
+    "babel-eslint": "^7.1.0",
+    "babel-loader": "^6.2.7",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "css-loader": "^0.25.0",
     "eslint": "^3.9.1",
     "eslint-config-standard": "^6.2.1",
     "eslint-config-standard-react": "^4.2.0",
@@ -43,11 +23,17 @@
     "eslint-plugin-promise": "^3.3.1",
     "eslint-plugin-react": "^6.6.0",
     "eslint-plugin-standard": "^2.0.1",
-    "react": "^15.1.0"
+    "html-webpack-plugin": "^2.26.0",
+    "node-sass": "^3.12.2",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1",
+    "webpack": "2.1.0-beta.25",
+    "webpack-dev-server": "2.1.0-beta.9"
   },
   "dependencies": {
-    "css-unit-converter": "^1.0.0",
-    "lodash.clonedeep": "^4.5.0",
-    "param-case": "^2.1.0"
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-log": "^2.0.1",
+    "url-loader": "^0.5.7"
   }
 }
