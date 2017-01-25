@@ -19,6 +19,7 @@ class LogExample extends React.Component {
         <h5>Lorem ipsum</h5>
         <h6>Lorem ipsum</h6>
         <h1 {...styles.heading}>Lists:</h1>
+
         <ul>
           <li>One</li>
           <li>Two</li>

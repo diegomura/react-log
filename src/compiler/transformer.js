@@ -21,6 +21,7 @@ const mergeDefaultProps = (node, parent, defaultProps) => {
       props: { ...newProps }
     };
   } else {
+    newProps.children = Array.isArray(newProps.children) ? newProps.children : [newProps.children];
     newProps.children = newProps.children.map((child) => {
       if (typeof child === 'string') {
         return {
