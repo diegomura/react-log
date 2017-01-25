@@ -22,6 +22,10 @@
 
 ## Install
 ```sh
+yarn add react-log
+```
+or
+```sh
 npm install react-log --save
 ```
 
