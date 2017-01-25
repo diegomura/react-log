@@ -42,30 +42,30 @@ import Log from 'react-log';
 
 //...
 <Log>
-	<h1
-		fontFamily='Open Sans, sans-serif'
-		fontWeight='normal'
-		fontSize='50px'>
-		React
-
-		<span
-			fontFamily='Arial, Helvetica, sans-serif'
-			background='#ffd10b'
-			fontSize='45px'
-			fontWeight='bold'
-			borderRadius='5px'
-			marginLeft='10px'
-			padding='5px'
-			borderBottom='2px solid black'>
-			log
-		</span>
-	</h1>
-	<a
-		display='block'
-		lineHeight='40px'
-		href='https://github.com/diegomura/react-log'>
-		For more info
-	</a>
+  <h1
+    fontFamily='Open Sans, sans-serif'
+    fontWeight='normal'
+    fontSize='50px'>
+    React
+    
+    <span
+      fontFamily='Arial, Helvetica, sans-serif'
+      background='#ffd10b'
+      fontSize='45px'
+      fontWeight='bold'
+      borderRadius='5px'
+      marginLeft='10px'
+      padding='5px'
+      borderBottom='2px solid black'>
+      log
+    </span>
+  </h1>
+  <a
+    display='block'
+    lineHeight='40px'
+    href='https://github.com/diegomura/react-log'>
+    For more info
+  </a>
 </Log>
 ```
 [See full example](https://github.com/diegomura/react-log/blob/master/examples/index.js)
