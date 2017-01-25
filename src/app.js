@@ -1,45 +1,53 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ForkRibbon from './components/ForkRibbon';
-import CodeBlock from './components/CodeBlock';
+import Link from './renderers/Link';
+import CodeBlock from './renderers/CodeBlock';
 import ConsoleNav from './components/ConsoleNav';
 import Hero from './components/Hero';
-import Log from 'react-log';
+import Logger from './components/Logger';
 import Markdown from 'react-markdown';
 import Readme from '../README.md';
 import './layout/Layout.scss';
 
-const App = () => (
-  <main>
-    <ForkRibbon />
-    <ConsoleNav />
-    <Hero />
-    <section>
-      <Markdown
-        source={Readme}
-        renderers={Object.assign({}, Markdown.renderers, { CodeBlock })} />
-    </section>
+class App extends React.PureComponent {
+  constructor (props) {
+    super(props);
 
-    <Log>
-      <h1
-        fontFamily='Open Sans, sans-serif'
-        fontWeight='normal'
-        fontSize='50px'>
-        React
-        <span
-          fontFamily='Arial, Helvetica, sans-serif'
-          background='#ffd10b'
-          fontSize='45px'
-          fontWeight='bold'
-          borderRadius='5px'
-          marginLeft='10px'
-          padding='5px'
-          borderBottom='2px solid black'>
-          log
-        </span>
-      </h1>
-    </Log>
-  </main>
-);
+    this.state = { loggedType: undefined };
+
+    this.runExample = ::this.runExample;
+  }
+
+  getChildContext () {
+    return {runExample: this.runExample};
+  }
+
+  runExample (type) {
+    this.setState({ loggedType: type });
+  }
+
+  render () {
+    const { loggedType } = this.state;
+
+    return (
+      <main>
+        <ForkRibbon />
+        <ConsoleNav />
+        <Hero />
+        <section>
+          <Markdown
+            source={Readme}
+            renderers={Object.assign({}, Markdown.renderers, { CodeBlock, Link })} />
+        </section>
+        <Logger component={loggedType} />
+      </main>
+    );
+  }
+}
+
+App.childContextTypes = {
+  runExample: React.PropTypes.func
+};
 
 ReactDOM.render(<App />, document.getElementById('app'));

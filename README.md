@@ -14,6 +14,7 @@ No proprietary syntax is needed for child HTML elements. _React-log_ handles the
 
 **Open your DevTools and watch how the _React-log_ logo gets rendered on the Console!**
 
+[Run the example](ReactLogLogo)
 ```js
 const LogoLogger = () => (
   <Log>
@@ -44,6 +45,7 @@ _Pretty neat, eh?_
 
 ## Components
 ### Headings
+[Run the example](Headings)
 ```jsx
 <Log>
   <h1>Lorem ipsum</h1>
@@ -55,6 +57,7 @@ _Pretty neat, eh?_
 </Log>
 ```
 ### Lists
+[Run the example](Lists)
 ```jsx
 <Log>
   <ul>
@@ -71,6 +74,7 @@ _Pretty neat, eh?_
 </Log>
 ```
 ### Paragraph
+[Run the example](Paragraph)
 ```jsx
 <Log>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -78,6 +82,7 @@ _Pretty neat, eh?_
 </Log>
 ```
 ### Links
+[Run the example](Links)
 ```jsx
 <Log>
   <a href="https://twitter.com/diegomura">Twitter</a>
@@ -85,6 +90,7 @@ _Pretty neat, eh?_
 </Log>
 ```
 ### Layout
+[Run the example](Layout)
 ```jsx
 <Log>
   <div>
@@ -104,6 +110,7 @@ _Not written yet!_
 It is also possible to render stateful components into the Console.
 Each time the component updates, the console is cleared and everything gets rendered again.
 
+[Run the example](Stateful)
 ```js
 import moment from 'moment';
 
