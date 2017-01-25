@@ -1,5 +1,4 @@
-<big><h1 align="center">react-log</h1></big>
-
+![react-log](https://cloud.githubusercontent.com/assets/5600341/22278164/f1e77fc8-e29f-11e6-98a1-c52703c112e5.png)
 <p align="center">
 	<a href="https://travis-ci.org/diegomura/react-log">
 		<img src="https://api.travis-ci.org/diegomura/react-log.svg?branch=master">
