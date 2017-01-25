@@ -16,12 +16,5 @@ export default {
     fontWeight: 'bold',
     borderRadius: '5px',
     borderBottom: '2px solid black'
-  },
-  heading: {
-    fontFamily: 'Open Sans, sans-serif',
-    fontWeight: 'normal',
-    fontSize: '25px',
-    color: '#a0a0a0',
-    marginTop: '35px'
   }
 };

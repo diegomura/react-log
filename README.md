@@ -40,37 +40,38 @@ Let's see it in action!
 ```js
 import Log from 'react-log';
 
-const h1Styles = {
-  fontFamily:"Open Sans, sans-serif",
-  color:"white",
-  padding:"10px 20px",
-  borderRadius:"8px",
-  background:"-webkit-linear-gradient(...)",
-	//...
-}
-
-const h2Styles = {
-  margin:"0px 0px 20px 20px",
-  padding:"15px",
-  border:"1px solid #CCC",
-	//...
-}
-
-const linkStyles = {
-	//...
-}
-
 //...
 <Log>
-	<h1 {...h1Styles}>react-log</h1>
-	<h2 {...h2Styles}>Cool things can be done in the console. Did you know that?</h2>
-	<a href="https://github.com/diegomura/react-log" {...linkStyles}>Github repo</a>
+	<h1
+		fontFamily='Open Sans, sans-serif'
+		fontWeight='normal'
+		fontSize='50px'>
+		React
+
+		<span
+			fontFamily='Arial, Helvetica, sans-serif'
+			background='#ffd10b'
+			fontSize='45px'
+			fontWeight='bold'
+			borderRadius='5px'
+			marginLeft='10px'
+			padding='5px'
+			borderBottom='2px solid black'>
+			log
+		</span>
+	</h1>
+	<a
+		display='block'
+		lineHeight='40px'
+		href='https://github.com/diegomura/react-log'>
+		For more info
+	</a>
 </Log>
 ```
 [See full example](https://github.com/diegomura/react-log/blob/master/examples/index.js)
 
 #### Output
-![banner](https://cloud.githubusercontent.com/assets/5600341/17076797/edb1eb32-5091-11e6-8c84-579ac50c913c.png)
+![banner](https://cloud.githubusercontent.com/assets/5600341/22278337/685d60c2-e2a1-11e6-8097-7774f87e07dd.png)
 
 #### Run the example yourself
 On the root of the project:
