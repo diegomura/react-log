@@ -85,18 +85,21 @@ _Pretty neat, eh?_
 [Run the example](Links)
 ```jsx
 <Log>
-  <a href="https://twitter.com/diegomura">Twitter</a>
-  <a href="https://github.com/diegomura">Github</a>
+  <a href='https://twitter.com/diegomura' display='block' color='blue'>Twitter</a>
+  <a href='https://github.com/diegomura' display='block' color='blue'>Github</a>
 </Log>
 ```
 ### Layout
 [Run the example](Layout)
 ```jsx
 <Log>
-  <div>
-    OuterDiv
-    <div>InnerDiv1</div>
-    <div>InnerDiv2</div>
+  <div color='red' fontSize='40px'>
+    <div>Div 1</div>
+    <span>Span 1</span>
+    <span color='blue'>Span 2</span>
+  </div>
+  <div fontSize='40px'>
+    Div 2
   </div>
 </Log>
 ```
@@ -110,7 +113,6 @@ _Not written yet!_
 It is also possible to render stateful components into the Console.
 Each time the component updates, the console is cleared and everything gets rendered again.
 
-[Run the example](Stateful)
 ```js
 import moment from 'moment';
 
