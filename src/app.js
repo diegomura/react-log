@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import ForkRibbon from './components/ForkRibbon';
 import CodeBlock from './components/CodeBlock';
 import ConsoleNav from './components/ConsoleNav';
 import Hero from './components/Hero';
@@ -10,6 +11,7 @@ import './layout/Layout.scss';
 
 const App = () => (
   <main>
+    <ForkRibbon />
     <ConsoleNav />
     <Hero />
     <section>
