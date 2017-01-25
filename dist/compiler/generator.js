@@ -43,6 +43,10 @@ var generator = function generator(node) {
     }
   }
 
+  // Prevent generating two consecutive `%c`. This might happen on nesting elements
+  var hasStyle = renderedChildren ? renderedChildren.value.indexOf('%c') === 0 : false;
+  var stylePrefix = hasStyle ? '' : '%c';
+
   // Here we mutate the result value or style, regarding the node's type.
   // Ex.
   //  * For a `div` element, we append a new line to generate the `display:block` attribute.
@@ -51,9 +55,13 @@ var generator = function generator(node) {
     case 'body':
     case 'ul':
     case 'ol':
-    case 'span':
-    case 'div':
       return renderedChildren;
+    case 'span':
+      return {
+        value: '' + stylePrefix + renderedChildren.value,
+        styles: renderedChildren.styles
+      };
+    case 'div':
     case 'h1':
     case 'h2':
     case 'h3':
@@ -62,7 +70,7 @@ var generator = function generator(node) {
     case 'h6':
     case 'p':
       return {
-        value: '%c' + renderedChildren.value + '\n',
+        value: '' + stylePrefix + renderedChildren.value + '\n',
         styles: renderedChildren.styles
       };
     case 'a':
@@ -70,7 +78,7 @@ var generator = function generator(node) {
       var newLine = node.props.display === 'block' ? '\n' : '';
 
       return {
-        value: '%c' + markup + node.props.href + newLine,
+        value: stylePrefix + markup + node.props.href + newLine,
         styles: renderedChildren.styles
       };
     case 'text':
@@ -80,7 +88,7 @@ var generator = function generator(node) {
       };
     case 'li':
       return {
-        value: '%c' + node.props.bullet + ' ' + renderedChildren.value + '\n',
+        value: '' + stylePrefix + node.props.bullet + ' ' + renderedChildren.value + '\n',
         styles: renderedChildren.styles
       };
     default:

@@ -36,6 +36,7 @@ var mergeDefaultProps = function mergeDefaultProps(node, parent, defaultProps) {
       props: _extends({}, newProps)
     };
   } else {
+    newProps.children = Array.isArray(newProps.children) ? newProps.children : [newProps.children];
     newProps.children = newProps.children.map(function (child) {
       if (typeof child === 'string') {
         return {
