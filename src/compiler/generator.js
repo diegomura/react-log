@@ -37,13 +37,9 @@ const generator = (node) => {
     case 'body':
     case 'ul':
     case 'ol':
-      return renderedChildren;
     case 'span':
-      return {
-        value: '%c' + renderedChildren.value,
-        styles: renderedChildren.styles
-      };
     case 'div':
+      return renderedChildren;
     case 'h1':
     case 'h2':
     case 'h3':
