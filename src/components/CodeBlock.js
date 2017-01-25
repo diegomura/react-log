@@ -1,31 +1,24 @@
 'use strict';
 
 import React from 'react';
-import PureRenderMixin from 'react-addons-pure-render-mixin';
 const hljs = window.hljs;
 const h = React.createElement;
 
-const CodeBlock = React.createClass({
-  displayName: 'CodeBlock',
-  mixins: [PureRenderMixin],
-  propTypes: {
-    literal: React.PropTypes.string,
-    language: React.PropTypes.string
-  },
+class CodeBlock extends React.PureComponent {
 
-  componentDidMount: function() {
+  componentDidMount () {
     this.highlightCode();
-  },
+  }
 
-  componentDidUpdate: function() {
+  componentDidUpdate () {
     this.highlightCode();
-  },
+  }
 
-  highlightCode: function() {
+  highlightCode () {
     hljs.highlightBlock(this.refs.code);
-  },
+  }
 
-  render: function() {
+  render () {
     return (
       h('pre', null,
         h('code', {
@@ -35,6 +28,11 @@ const CodeBlock = React.createClass({
       )
     );
   }
-});
+}
+
+CodeBlock.propTypes = {
+  literal: React.PropTypes.string,
+  language: React.PropTypes.string
+};
 
 export default React.createFactory(CodeBlock);
