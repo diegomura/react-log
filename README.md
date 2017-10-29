@@ -1,5 +1,10 @@
-![react-log](https://cloud.githubusercontent.com/assets/5600341/22278164/f1e77fc8-e29f-11e6-98a1-c52703c112e5.png)
-> React for the Console
+<p align="center"><img src="https://cloud.githubusercontent.com/assets/5600341/22278164/f1e77fc8-e29f-11e6-98a1-c52703c112e5.png" width="400px"></p>
+
+React for the Console
+
+[![npm](https://img.shields.io/npm/v/@react-log/core.svg)](https://www.npmjs.com/package/@react-log/core)
+[![Travis](https://img.shields.io/travis/diegomura/react-log.svg)](https://travis-ci.org/diegomura/react-log)
+[![license](https://img.shields.io/github/license/diegomura/react-log.svg)](https://github.com/diegomura/react-log/blob/master/LICENSE)
 
 ## Install
 ```sh
