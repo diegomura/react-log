@@ -3,23 +3,27 @@ import ReactDOM from 'react-dom';
 import Log from 'react-log';
 import styles from './styles';
 
-class LogExample extends React.Component {
-  render () {
-    return (
-      <Log>
-        <div {...styles.react}>
-          React
-          <span {...styles.log}>log</span>
-        </div>
-        <a href='https://github.com/diegomura/react-log' display='block' lineHeight='40px'>
-          For more info
-        </a>
-      </Log>
-    );
-  }
-}
+const LogExample = () => (
+  <Log>
+    <h1 style={styles.react}>
+      React
+      <span style={styles.log}>
+        log
+      </span>
+    </h1>
+    <a
+      href='https://github.com/diegomura/react-log'
+      style={styles.link}
+    >
+      For more info
+    </a>
+  </Log>
+);
 
 ReactDOM.render(
-  <LogExample />,
+  <div>
+    <h1>Open your console!</h1>
+    <LogExample />
+  </div>,
   document.getElementById('root')
 );

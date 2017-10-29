@@ -4,7 +4,8 @@ export default {
     color: 'black',
     padding: '0px 0px',
     margin: '5px 0px 0px 0px',
-    fontSize: '50px'
+    fontSize: '50px',
+    fontWeight: 'normal'
   },
   log: {
     fontFamily: 'Arial, Helvetica, sans-serif',
@@ -16,5 +17,9 @@ export default {
     fontWeight: 'bold',
     borderRadius: '5px',
     borderBottom: '2px solid black'
+  },
+  link: {
+    display: 'block',
+    lineHeight: '40px'
   }
 };

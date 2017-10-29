@@ -8,7 +8,7 @@
  * }
 **/
 const generator = (node) => {
-  const { children, ...otherProps } = node.props;
+  const { children, style, ...otherProps } = node.props;
 
   // Here we iterate through the ast tree until we run into a leaf node (of type text).
   let renderedChildren;
@@ -70,7 +70,7 @@ const generator = (node) => {
     case 'text':
       return {
         value: `${children}`,
-        styles: otherProps
+        styles: {...otherProps, ...style}
       };
     case 'li':
       return {
