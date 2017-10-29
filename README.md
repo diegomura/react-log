@@ -24,7 +24,7 @@ Let's see it in action!
 
 ### Example
 
-```js
+```jsx
 import Log from 'react-log';
 
 //...
