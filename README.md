@@ -2,7 +2,7 @@
 
 React for the Console
 
-[![npm](https://img.shields.io/npm/v/@react-log/core.svg)](https://www.npmjs.com/package/@react-log/core)
+[![npm](https://img.shields.io/npm/v/react-log.svg)](https://www.npmjs.com/package/react-log)
 [![Travis](https://img.shields.io/travis/diegomura/react-log.svg)](https://travis-ci.org/diegomura/react-log)
 [![license](https://img.shields.io/github/license/diegomura/react-log.svg)](https://github.com/diegomura/react-log/blob/master/LICENSE)
 

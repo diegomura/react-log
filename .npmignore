@@ -1,0 +1,8 @@
+src
+specs
+examples
+.DS_Store
+logs
+*.log
+node_modules
+npm-debug.log

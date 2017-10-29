@@ -1,12 +1,13 @@
 {
   "name": "react-log",
-  "version": "2.3.1",
+  "version": "3.0.0",
   "description": "React for the Console",
   "main": "dist/index.js",
   "scripts": {
     "build": "babel --optional runtime src -d dist",
     "deploy": "git pull --rebase origin master && git push origin master",
-    "test": "jest --config jest.config.js"
+    "test": "jest --config jest.config.js",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
