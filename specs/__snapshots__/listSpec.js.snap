@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Lists Should render ordered list with custom styles 1`] = `
+"%c1 - One
+%c2 - Two
+%c3 - Three
+ font-family:Times New Roman;font-size:8px;color:red;bullet:1 -;,font-family:Times New Roman;font-size:8px;color:red;bullet:2 -;,font-family:Times New Roman;font-size:8px;color:red;bullet:3 -;"
+`;
+
+exports[`Lists Should render ordered list with default styles 1`] = `
+"%c1 - One
+%c2 - Two
+%c3 - Three
+ font-family:Times New Roman;font-size:16px;color:black;bullet:1 -;,font-family:Times New Roman;font-size:16px;color:black;bullet:2 -;,font-family:Times New Roman;font-size:16px;color:black;bullet:3 -;"
+`;
+
+exports[`Lists Should render unordered list with custom styles 1`] = `
+"%c• One
+%c• Two
+%c• Three
+ font-family:Times New Roman;font-size:8px;color:red;bullet:•;,font-family:Times New Roman;font-size:8px;color:red;bullet:•;,font-family:Times New Roman;font-size:8px;color:red;bullet:•;"
+`;
+
+exports[`Lists Should render unordered list with default styles 1`] = `
+"%c• One
+%c• Two
+%c• Three
+ font-family:Times New Roman;font-size:16px;color:black;bullet:•;,font-family:Times New Roman;font-size:16px;color:black;bullet:•;,font-family:Times New Roman;font-size:16px;color:black;bullet:•;"
+`;

@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Paragraph Should render paragraph with custom styles 1`] = `
+"%cLorem Ipsum
+ font-family:Times New Roman;font-size:16px;color:red;"
+`;
+
+exports[`Paragraph Should render paragraph with default styles 1`] = `
+"%cLorem Ipsum
+ font-family:Times New Roman;font-size:16px;color:black;"
+`;
