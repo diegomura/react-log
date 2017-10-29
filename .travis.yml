@@ -1,5 +1,12 @@
 language: node_js
 node_js:
-  - "5"
-script:
-  - "npm run build"
+  - '7'
+  - '6'
+
+cache:
+  yarn: true
+  directories:
+  - node_modules
+
+install: yarn --frozen-lockfile
+script: yarn test
