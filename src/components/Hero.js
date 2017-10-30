@@ -9,6 +9,7 @@ const Hero = styled.main`
   display: flex;
   height: 100%;
   min-height: 100vh;
+  padding: 70px 20px;
   background: white;
   position: relative;
   align-items: center;
