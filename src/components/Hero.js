@@ -1,25 +1,81 @@
-import React, { PureComponent } from 'react';
-import './Hero.scss';
+import React from 'react';
+import styled from 'styled-components';
+import Logo from './Logo';
+import CodeBlock from './CodeBlock';
+import Link from './Link';
+import GithubStars from './GithubStars';
 
-class Hero extends PureComponent {
-  render () {
-    return (
-      <div className='hero'>
-        <span>></span>
-        <h1>
-          React
-          <span>log</span>
-        </h1>
-        <h2>React for the Console</h2>
-        <iframe
-          src='https://ghbtns.com/github-btn.html?user=diegomura&repo=react-log&type=star&count=true&size=large'
-          frameBorder='0'
-          scrolling='0'
-          width='160px'
-          height='30px' />
-      </div>
-    );
+const Hero = styled.main`
+  display: flex;
+  height: 100%;
+  min-height: 100vh;
+  background: white;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 2px solid #e6e6e6;
+`;
+
+const Cursor = styled.span`
+  top: 10px;
+  left: 16px;
+  color: #367cf1;
+  font-size: 20px;
+  font-weight: bold;
+  position: absolute;
+`;
+
+const Subtitle = styled.h2`
+  margin: 0px;
+  color: #989898;
+  margin-top: 8px;
+  font-weight: normal;
+`;
+
+const SampleCode = styled(CodeBlock)`
+  margin-top: 30px;
+  padding-right: 55px;
+  background-color: #fbfbfb;
+
+  > code {
+    background-color: #fbfbfb !important;
   }
-};
+`;
 
-export default Hero;
+export default () => (
+  <Hero>
+    <Cursor>></Cursor>
+    <Logo />
+    <Subtitle>React for the Console</Subtitle>
+    <GithubStars />
+    <SampleCode literal={`
+      const Logo = () => (
+        <Log>
+          <h1
+            style={{
+              color: 'black',
+              fontSize: '50px'
+              fontWeight: 'normal',
+              fontFamily: 'Open Sans, sans-serif',
+            }}>
+            React
+            <span
+              style={{
+                color: 'white',
+                fontSize: '45px',
+                fontWeight: 'bold',
+                marginLeft: '10px',
+                padding: '5px'
+                fontFamily: 'Arial, Helvetica, sans-serif',
+                background: 'linear-gradient(to bottom right, #13493b, #016a26)',
+              }}>
+              log
+            </span>
+          </h1>
+        </Log>
+      );
+    `} />
+    <Link href='ReactLogLogo' />
+  </Hero>
+);

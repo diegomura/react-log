@@ -35,17 +35,19 @@ h3 {
 }
 
 p {
+  font-size: 18px;
   margin: 30px 0px 15px 0px;
 }
 
 pre {
   padding: 10px;
-  font-size: 1.3em;
+  font-size: 1.4em;
   margin: 10px 0px;
   background: white;
   border-radius: 4px;
+  margin-bottom: 40px;
   border: 1px solid #e6e6e6;
-  border-bottom: 3px solid #cacaca;
+  border-bottom: 3px solid #ababab;
 }
 
 code {

@@ -14,25 +14,27 @@ No proprietary syntax is needed for child HTML elements. _React-log_ handles the
 
 **Open your DevTools and watch how the _React-log_ logo gets rendered on the Console!**
 
-[Run the example](ReactLogLogo)
 ```js
 const LogoLogger = () => (
   <Log>
     <h1
-      fontFamily='Open Sans, sans-serif'
-      fontWeight='normal'
-      fontSize='50px'>
+      style={{
+        fontFamily:'Open Sans, sans-serif'
+        fontWeight:'normal'
+        fontSize:'50px'
+      }}>
       React
 
       <span
-        fontFamily='Arial, Helvetica, sans-serif'
-        background='#ffd10b'
-        fontSize='45px'
-        fontWeight='bold'
-        borderRadius='5px'
-        marginLeft='10px'
-        padding='5px'
-        borderBottom='2px solid black'>
+        style={{
+          color: 'white',
+          fontFamily: 'Arial, Helvetica, sans-serif',
+          background: 'linear-gradient(to bottom right, #13493b, #016a26)',
+          fontSize: '45px',
+          fontWeight: 'bold',
+          marginLeft: '10px',
+          padding: '5px'
+        }}>
         log
       </span>
     </h1>
@@ -41,11 +43,12 @@ const LogoLogger = () => (
 
 ReactDOM.render(<LogoLogger />, element);
 ```
+[Run the example](ReactLogLogo)
+
 _Pretty neat, eh?_
 
 ## Components
 ### Headings
-[Run the example](Headings)
 ```jsx
 <Log>
   <h1>Lorem ipsum</h1>
@@ -56,8 +59,9 @@ _Pretty neat, eh?_
   <h6>Lorem ipsum</h6>
 </Log>
 ```
+[Run the example](Headings)
+
 ### Lists
-[Run the example](Lists)
 ```jsx
 <Log>
   <ul>
@@ -73,39 +77,40 @@ _Pretty neat, eh?_
   </ol>
 </Log>
 ```
+[Run the example](Lists)
+
 ### Paragraph
-[Run the example](Paragraph)
 ```jsx
 <Log>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
   <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 </Log>
 ```
+[Run the example](Paragraph)
+
 ### Links
-[Run the example](Links)
 ```jsx
 <Log>
-  <a href='https://twitter.com/diegomura' display='block' color='blue'>Twitter</a>
-  <a href='https://github.com/diegomura' display='block' color='blue'>Github</a>
+  <a href='https://twitter.com/diegomura' style={{ display:'block', color:'blue' }}>Twitter</a>
+  <a href='https://github.com/diegomura' style={{ display:'block', color:'blue' }}>Github</a>
 </Log>
 ```
+[Run the example](Links)
+
 ### Layout
-[Run the example](Layout)
 ```jsx
 <Log>
-  <div color='red' fontSize='40px'>
+  <div style={{ color:'red', fontSize:'40px' }}>
     <div>Div 1</div>
     <span>Span 1</span>
-    <span color='blue'>Span 2</span>
+    <span style={{ color:'blue' }}>Span 2</span>
   </div>
-  <div fontSize='40px'>
+  <div style={{ fontSize:'40px' }}>
     Div 2
   </div>
 </Log>
 ```
-
-## Styling
-_Not written yet!_
+[Run the example](Layout)
 
 ## Other examples
 
@@ -146,6 +151,7 @@ class DynamicLogger extends React.Component {
   }
 }
 ```
+[Run the example](Dynamic)
 
 ### Binding DOM with Console
 _Not written yet!_

@@ -1,10 +1,23 @@
 import React from 'react';
+import Log from 'react-log';
 
-const ReactLogLogo = (
-  <div>
-    <a href='https://twitter.com/diegomura' display='block' color='blue'>Twitter</a>
-    <a href='https://github.com/diegomura' display='block' color='blue'>Github</a>
-  </div>
+const Links = () => (
+  <Log>
+    <div>
+      <a
+        href='https://twitter.com/diegomura'
+        style={{ display: 'block', color: 'blue' }}
+      >
+        Twitter
+      </a>
+      <a
+        href='https://github.com/diegomura'
+        style={{ display: 'block', color: 'blue' }}
+      >
+        Github
+      </a>
+    </div>
+  </Log>
 );
 
-export default ReactLogLogo;
+export default Links;

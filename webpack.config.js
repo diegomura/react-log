@@ -1,20 +1,15 @@
-'use strict';
-
-const webpack = require('webpack');
+const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  context: __dirname + '/src',
+  context: path.join(__dirname, '/src'),
   entry: {
     app: ['./app.js']
   },
   output: {
-    path: __dirname + '/dist',
+    path: path.resolve(__dirname, '/dist'),
     filename: '[name].bundle.js',
     publicPath: '/'
-  },
-  devServer: {
-    contentBase: __dirname + '/src'
   },
   devtool: 'source-map',
   module: {
@@ -32,24 +27,16 @@ module.exports = {
         ]
       },
       {
-        test: /\.(sass|scss)$/,
-        use: [
-          'style-loader',
-          'css-loader',
-          'sass-loader'
-        ]
-      },
-      {
         test: /\.(png|jpg)$/,
         loader: 'url-loader?limit=8192'
       },
       {
         test: /\.json$/,
-        loader: 'json'
+        loader: 'json-loader'
       },
       {
         test: /\.md$/,
-        loader: 'text'
+        loader: 'text-loader'
       }
     ]
   },

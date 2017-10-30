@@ -1,23 +1,30 @@
 import React from 'react';
+import Log from 'react-log';
 
-const ReactLogLogo = (
-  <h1
-    fontFamily='Open Sans, sans-serif'
-    fontWeight='normal'
-    fontSize='50px'>
-    React
-    <span
-      fontFamily='Arial, Helvetica, sans-serif'
-      background='#ffd10b'
-      fontSize='45px'
-      fontWeight='bold'
-      borderRadius='5px'
-      marginLeft='10px'
-      padding='5px'
-      borderBottom='2px solid black'>
-      log
-    </span>
-  </h1>
+const Logo = () => (
+  <Log>
+    <h1
+      style={{
+        color: 'black',
+        fontFamily: 'Open Sans, sans-serif',
+        fontWeight: 'normal',
+        fontSize: '50px'
+      }}>
+      React
+      <span
+        style={{
+          color: 'white',
+          fontFamily: 'Arial, Helvetica, sans-serif',
+          background: 'linear-gradient(to bottom right, #13493b, #016a26)',
+          fontSize: '45px',
+          fontWeight: 'bold',
+          marginLeft: '10px',
+          padding: '5px'
+        }}>
+        log
+      </span>
+    </h1>
+  </Log>
 );
 
-export default ReactLogLogo;
+export default Logo;

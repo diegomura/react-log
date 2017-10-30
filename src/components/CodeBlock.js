@@ -1,6 +1,5 @@
-'use strict';
-
 import React from 'react';
+import PropTypes from 'prop-types';
 const hljs = window.hljs;
 
 class CodeBlock extends React.PureComponent {
@@ -18,10 +17,12 @@ class CodeBlock extends React.PureComponent {
   }
 
   render () {
+    const { language, literal, className } = this.props;
+
     return (
-      <pre>
-        <code ref='code' className={this.props.language}>
-          {this.props.literal}
+      <pre className={className}>
+        <code ref='code' className={language}>
+          {literal}
         </code>
       </pre>
     );
@@ -29,8 +30,9 @@ class CodeBlock extends React.PureComponent {
 }
 
 CodeBlock.propTypes = {
-  literal: React.PropTypes.string,
-  language: React.PropTypes.string
+  literal: PropTypes.string,
+  language: PropTypes.string,
+  className: PropTypes.string
 };
 
 export default React.createFactory(CodeBlock);
