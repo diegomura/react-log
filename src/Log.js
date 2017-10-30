@@ -8,11 +8,7 @@ class Log extends React.Component {
   }
 
   componentWillUpdate () {
-    if (console.clear) {
-      console.clear();
-    } else {
-      clear();
-    }
+    window.clear();
   }
 
   componentDidUpdate () {
