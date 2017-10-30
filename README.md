@@ -1,4 +1,4 @@
-<p align="center"><img src="https://cloud.githubusercontent.com/assets/5600341/22278164/f1e77fc8-e29f-11e6-98a1-c52703c112e5.png" width="400px"></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/5600341/32155369-b420c40a-bd15-11e7-940d-580db5421252.png" width="400px"></p>
 
 React for the Console
 
@@ -29,23 +29,24 @@ import Log from 'react-log';
 
 //...
 <Log>
-  <h1 style={{
-    fontFamily: 'Open Sans, sans-serif',
-    fontWeight: 'normal',
-    fontSize: '50px'
-  }}>
-    React
-
-    <span style={{
-      fontFamily: 'Arial, Helvetica, sans-serif',
-      background: '#ffd10b',
-      fontSize: '45px',
-      fontWeight: 'bold',
-      borderRadius: '5px',
-      marginLeft: '10px',
-      padding: '5px',
-      borderBottom: '2px solid black'
+  <h1
+    style={{
+      color: 'black',
+      fontSize: '50px'
+      fontWeight: 'normal',
+      fontFamily: 'Open Sans, sans-serif',
     }}>
+    React
+    <span
+      style={{
+        color: 'white',
+        fontSize: '45px',
+        fontWeight: 'bold',
+        marginLeft: '10px',
+        padding: '5px'
+        fontFamily: 'Arial, Helvetica, sans-serif',
+        background: 'linear-gradient(to bottom right, #13493b, #016a26)',
+      }}>
       log
     </span>
   </h1>
@@ -60,7 +61,7 @@ import Log from 'react-log';
 [See full example](https://github.com/diegomura/react-log/blob/master/examples/index.js)
 
 #### Output
-![banner](https://cloud.githubusercontent.com/assets/5600341/22278337/685d60c2-e2a1-11e6-8097-7774f87e07dd.png)
+![banner](https://user-images.githubusercontent.com/5600341/32155421-008b99dc-bd16-11e7-8ac4-13f094577b7e.png)
 
 #### Run the example yourself
 On the root of the project:
