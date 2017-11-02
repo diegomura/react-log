@@ -16,7 +16,7 @@ npm install react-log --save
 ```
 
 ## Usage
-_react-log_ exports a single React Component called _Log_. Each child will not be rendered on the DOM, but it will produce a analog representation on the console.
+_react-log_ exports a single React Component called _Log_. Each child will not be rendered on the DOM, but will produce an analog representation on the console.
 
 No proprietary syntax is needed for child HTML elements. _react-log_ handles the parsing and rendering of native React-DOM elements for you.
 
@@ -27,7 +27,6 @@ Let's see it in action!
 ```jsx
 import Log from 'react-log';
 
-//...
 <Log>
   <h1
     style={{
