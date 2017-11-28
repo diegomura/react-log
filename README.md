@@ -31,7 +31,7 @@ import Log from 'react-log';
   <h1
     style={{
       color: 'black',
-      fontSize: '50px'
+      fontSize: '50px',
       fontWeight: 'normal',
       fontFamily: 'Open Sans, sans-serif',
     }}>
@@ -42,7 +42,7 @@ import Log from 'react-log';
         fontSize: '45px',
         fontWeight: 'bold',
         marginLeft: '10px',
-        padding: '5px'
+        padding: '5px',
         fontFamily: 'Arial, Helvetica, sans-serif',
         background: 'linear-gradient(to bottom right, #13493b, #016a26)',
       }}>
