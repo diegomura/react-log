@@ -2,7 +2,7 @@
 
 exports[`Paragraph Should render paragraph with custom styles 1`] = `
 "%cLorem Ipsum
- font-family:Times New Roman;font-size:16px;color:red;"
+ font-family:Times New Roman;font-size:16px;color:black;"
 `;
 
 exports[`Paragraph Should render paragraph with default styles 1`] = `
