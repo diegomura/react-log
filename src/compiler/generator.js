@@ -12,7 +12,7 @@ const generator = (node) => {
 
   // Here we iterate through the ast tree until we run into a leaf node (of type text).
   let renderedChildren;
-  if (node.type !== 'text') {
+  if (node.type !== 'text' && children) {
     if (Array.isArray(children)) {
       // If the node children is an array, we generate each child node
       // and merge it's values and styles.
@@ -77,6 +77,22 @@ const generator = (node) => {
         value: `${stylePrefix}${node.props.bullet} ${renderedChildren.value}\n`,
         styles: renderedChildren.styles
       };
+    case 'img':
+      const { src, width, height, style } = node.props
+      const w = style && style.width ? parseInt(style.width, 10) : width
+      const h = style && style.height ? parseInt(style.height, 10) : height
+      return {
+        value: `\n${stylePrefix}+\n`,
+        styles: {
+          background: `url(${src})`,
+          backgroundSize: `${w} ${h}`,
+          color: 'transparent',
+          fontSize: '1px',
+          padding: `${Math.floor(h / 2)}px ${Math.floor(w / 2)}px`,
+          lineHeight: `${h}px`,
+          ...style,
+        },
+      }
     default:
       throw new TypeError(node.type);
   }

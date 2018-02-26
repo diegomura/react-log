@@ -37,6 +37,7 @@ const traverser = (ast, visitor) => {
         }
         break;
       case 'text':
+      case 'img':
         break;
       default:
         throw new TypeError(node.type);
