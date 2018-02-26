@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Image Should render image with custom styles 1`] = `
+"
+%c+
+ background:url(http://lorempixel.com/400/200/sports/5/);background-size:800 400;color:transparent;font-size:1px;padding:200px 400px;line-height:400px;width:800px;height:400px;border:2px solid red;"
+`;
+
+exports[`Image Should render image with default styles 1`] = `
+"
+%c+
+ background:url(http://lorempixel.com/400/200/sports/5/);background-size:400 200;color:transparent;font-size:1px;padding:100px 200px;line-height:200px;"
+`;
