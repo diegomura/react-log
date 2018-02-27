@@ -1,6 +1,6 @@
 {
   "name": "react-log",
-  "version": "3.0.1",
+  "version": "4.0.0",
   "description": "React for the Console",
   "main": "dist/index.js",
   "scripts": {
