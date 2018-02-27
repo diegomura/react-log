@@ -77,7 +77,7 @@ const generator = (node) => {
         value: `${stylePrefix}${node.props.bullet} ${renderedChildren.value}\n`,
         styles: renderedChildren.styles
       };
-    case 'img':
+    case 'img': {
       const { src, width, height, style } = node.props
       const w = style && style.width ? parseInt(style.width, 10) : width
       const h = style && style.height ? parseInt(style.height, 10) : height
@@ -93,6 +93,7 @@ const generator = (node) => {
           ...style,
         },
       }
+    }
     default:
       throw new TypeError(node.type);
   }
