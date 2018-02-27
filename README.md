@@ -97,6 +97,14 @@ _Pretty neat, eh?_
 ```
 [Run the example](Links)
 
+### Images
+```jsx
+<Log>
+  <img src="image url" width="400" height="200" />
+</Log>
+```
+[Run the example](Images)
+
 ### Layout
 ```jsx
 <Log>
